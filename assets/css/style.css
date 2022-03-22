@@ -1,3 +1,14 @@
 body {
   background-color: whitesmoke;
+  padding: 5rem;
+}
+
+.container {
+  width: auto;
+  height: auto;
+  background: rgb(240, 235, 197);
+  margin: auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
 }
