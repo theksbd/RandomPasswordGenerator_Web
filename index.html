@@ -23,11 +23,53 @@
       <div id="header">
         <h1>Random Password Generator</h1>
       </div>
-      <div id="select-option">
-        <p class="inner-text">Lowercase Characters:</p>
-        <p class="inner-text">Uppercase Characters:</p>
-        <p class="inner-text">Numbers:</p>
+      <form>
+        <label for="length">Enter your password's length (max 25): </label>
+        <input
+          type="number"
+          id="length"
+          name="length"
+          min="1"
+          max="25"
+          step="1"
+          value="16"
+        />
+      </form>
+      <div class="select-option">
+        <div class="inner-text">
+          Lowercase Characters:
+          <input
+            type="checkbox"
+            id="lowercase"
+            name="lowercase"
+            value="lowercase"
+          />
+          <label for="lowercase"> (e.g. abcd...) </label>
+        </div>
+        <div class="inner-text">
+          Uppercase Characters:
+          <input
+            type="checkbox"
+            id="uppercase"
+            name="uppercase"
+            value="uppercase"
+          />
+          <label for="uppercase"> (e.g. ABCD...) </label>
+        </div>
+        <div class="inner-text">
+          Numbers:
+          <input type="checkbox" id="number" name="number" value="number" />
+          <label for="number"> (e.g. 1234...) </label>
+        </div>
+        <div class="inner-text">
+          Symbols:
+          <input type="checkbox" id="symbol" name="symbol" value="symbol" />
+          <label for="symbol"> (e.g. @#$% ...) </label>
+        </div>
       </div>
+      <br>
+      <button id="submit" class="btn-submit">Generate</button>
+      <p>Here is your password</p>
     </div>
   </body>
 </html>
