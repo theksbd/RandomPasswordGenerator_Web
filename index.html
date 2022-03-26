@@ -15,7 +15,7 @@
     <link rel="icon" href="./img/html5.png" />
     <!-- External CSS files and JS files-->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src=".assets/script/script.js"></script>
+    <script src="./assets/script/script.js"></script>
   </head>
 
   <body>
@@ -23,18 +23,15 @@
       <div id="header">
         <h1>Random Password Generator</h1>
       </div>
-      <form>
+      <div>
         <label for="length">Enter your password's length (max 25): </label>
         <input
-          type="number"
+          type="text"
           id="length"
           name="length"
-          min="1"
-          max="25"
-          step="1"
           value="16"
         />
-      </form>
+      </div>
       <div class="select-option">
         <div class="inner-text">
           Lowercase Characters:
@@ -67,9 +64,9 @@
           <label for="symbol"> (e.g. @#$% ...) </label>
         </div>
       </div>
-      <br>
+      <br />
       <button id="submit" class="btn-submit">Generate</button>
-      <p>Here is your password</p>
+      <p><strong class="result">Here</strong> will display your password</p>
     </div>
   </body>
 </html>

@@ -1,6 +1,7 @@
-const a = 5;
-const b = 10;
+// const password_length = document.getElementById("length").value;
+const lowercase = document.getElementById("lowercase");
+console.log(lowercase);
 
-if (a > b) console.log("Hello");
-else console.log("Hi");
-// ====
+const generate = document.getElementById("submit").onclick = function() {
+    console.log("Hello");
+}
