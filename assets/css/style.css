@@ -14,3 +14,23 @@ body {
 h1 {
   text-align: center;
 }
+
+.btn-submit {
+  background-color: rgb(32, 237, 252);
+  border: solid 3px;
+}
+
+.btn-submit:hover {
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+.btn-reset {
+  background-color: rgb(69, 245, 16);
+  border: solid 3px;
+}
+
+.btn-reset:hover {
+  color: whitesmoke;
+  font-size: 18px;
+}
