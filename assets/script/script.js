@@ -6,11 +6,21 @@
 //     console.log("Hello");
 // }
 
-const password_res = 123456;
-function returnPass() {
-    document.getElementById("result").innerHTML = password_res;
-}
+let res = "";
 
-function resetPass() {
-    document.getElementById("result").innerHTML = "Here";
+function generatePass() {
+  let length = document.getElementById("password-length").value;
+  if (length <= 0)
+    document.getElementById("result-text").innerText =
+      "Your length is invalid to create a password";
+  else {
+    let containLowercase = document.querySelector("#lowercase").checked;
+    let containUppercase = document.querySelector("#uppercase").checked;
+    let containNumber = document.querySelector("#number").checked;
+    let containSymbol = document.querySelector("#symbol").checked;
+
+    document.getElementById(
+      "result-text"
+    ).innerText = `${containLowercase} is your password`;
+  }
 }
