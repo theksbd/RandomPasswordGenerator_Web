@@ -9,18 +9,16 @@
 let res = "";
 
 function generatePass() {
-  let length = document.getElementById("password-length").value;
+  const length = document.getElementById("password-length").value;
+  const result = document.getElementById("result-text");
   if (length <= 0)
-    document.getElementById("result-text").innerText =
-      "Your length is invalid to create a password";
+    result.innerText = "Your length is invalid to create a password";
   else {
-    let containLowercase = document.querySelector("#lowercase").checked;
-    let containUppercase = document.querySelector("#uppercase").checked;
-    let containNumber = document.querySelector("#number").checked;
-    let containSymbol = document.querySelector("#symbol").checked;
-
-    document.getElementById(
-      "result-text"
-    ).innerText = `${containLowercase} is your password`;
+    const containLowercase = document.querySelector("#lowercase").checked;
+    const containUppercase = document.querySelector("#uppercase").checked;
+    const containNumber = document.querySelector("#number").checked;
+    const containSymbol = document.querySelector("#symbol").checked;
+      
+    result.innerText = `${res} is your password`;
   }
 }
