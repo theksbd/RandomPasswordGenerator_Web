@@ -11,7 +11,7 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)
 const randomCharacter = () => getRandomNumber(0, 3);
 
 function loopToGenerate(currentCharacter) {
-  // 0: lowercase, 1: uppercase, 2: number, 3: symbol
+  // 0: lowercase, 1: uppercase, 2: number, 3: symbol (@#$%+-*/!)
   let value = "";
   switch (currentCharacter) {
     case 0:
@@ -24,9 +24,12 @@ function loopToGenerate(currentCharacter) {
       value = getRandomNumber('0'.charCodeAt(0), '9'.charCodeAt(0));
       break;
     default:
+      const symbol = ['@', '#', '$', '%', '+', '-', '*', '/', '!'];
+      value = getRandomNumber(0, 8);
+      value = symbol[value];
       break;
   }
-  return String.fromCharCode(value);
+  return currentCharacter === 3 ? value : String.fromCharCode(value);
 }
 
 function generatePass() {
