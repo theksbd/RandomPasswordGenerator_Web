@@ -1,6 +1,6 @@
 body {
   background-color: whitesmoke;
-  padding: 5% 5%;
+  padding: 5%;
 }
 
 .container {
@@ -8,10 +8,10 @@ body {
   margin: 0;
   padding: 1rem 5rem;
   border: solid rgb(28, 182, 74) 3px;
-  border-radius: 1rem;
+  border-radius: 20px;
 }
 
-h1 {
+.heading-title {
   text-align: center;
 }
 
