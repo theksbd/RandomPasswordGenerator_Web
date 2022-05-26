@@ -46,12 +46,21 @@ function generatePass() {
     if (containSymbol == true)
       userSelection[3] = true;
 
-    while (res.length < passwordLength) {
-      const currentCharacter = randomCharacter();
-      if (userSelection[currentCharacter] == false)
-        continue;
-      res += loopToGenerate(currentCharacter);
+    const isValidChoice = userSelection.some(selection => selection == true);
+    if (isValidChoice) {
+      while (res.length < passwordLength) {
+        const currentCharacter = randomCharacter();
+        if (userSelection[currentCharacter] == false)
+          continue;
+        res += loopToGenerate(currentCharacter);
+      }
     }
-    result.innerText = `${res} is your password`;
+
+    if (res.length == 0) {
+      result.innerText = "Please choose at least one choice from above to generate your password";
+    }
+    else {
+      result.innerText = `${res} is your password`;
+    }
   }
 }
