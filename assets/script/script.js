@@ -24,12 +24,14 @@ function loopToGenerate(currentCharacter) {
   return currentCharacter === 3 ? value : String.fromCharCode(value);
 }
 
-function generatePass() {
+function generatePassword() {
   let res = "";
   const passwordLength = document.getElementById("password-length").value;
   const result = document.getElementById("result-text");
   if (passwordLength <= 0)
     result.innerText = "Your length is invalid to create a password";
+  else if (passwordLength >= 80)
+    result.innerText = "Your length will break my effort to make this website as responsive as possible :((";
   else {
     const containLowercase = document.querySelector("#lowercase").checked;
     const containUppercase = document.querySelector("#uppercase").checked;

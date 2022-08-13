@@ -1,21 +1,84 @@
-body {
-  background-color: whitesmoke;
-  padding: 5%;
-}
-
-.container {
-  background-color: rgb(242, 253, 190);
+* {
   margin: 0;
-  padding: 1rem 5rem;
-  border: solid rgb(28, 182, 74) 3px;
-  border-radius: 20px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.heading-title {
+html {
+  font-size: 16px;
+  line-height: 2;
+}
+
+body {
+  background-color: rgb(185, 251, 198);
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
   text-align: center;
 }
 
+.container {
+  width: 70%;
+  background-color: #f2fdbe;
+  margin: 70px auto;
+  padding: 12px 50px;
+  border: solid #1cb64a 3px;
+  border-radius: 20px;
+}
+
+.wrapper {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(30px, auto);
+}
+
+input[type=number] {
+  width: 150px;
+}
+
 .btn-submit {
-  background-color: rgb(32, 237, 252);
-  border: solid 3px;
+  background: #21e8ba;
+  background-image: -webkit-linear-gradient(top, #21e8ba, #1cb64a);
+  background-image: -moz-linear-gradient(top, #21e8ba, #1cb64a);
+  background-image: -ms-linear-gradient(top, #21e8ba, #1cb64a);
+  background-image: -o-linear-gradient(top, #21e8ba, #1cb64a);
+  background-image: linear-gradient(to bottom, #21e8ba, #1cb64a);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+.btn-submit:hover {
+  background: #2ae082;
+  background-image: -webkit-linear-gradient(top, #2ae082, #1cb64a);
+  background-image: -moz-linear-gradient(top, #2ae082, #1cb64a);
+  background-image: -ms-linear-gradient(top, #2ae082, #1cb64a);
+  background-image: -o-linear-gradient(top, #2ae082, #1cb64a);
+  background-image: linear-gradient(to bottom, #2ae082, #1cb64a);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.result-text {
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 650px) {
+  .wrapper {
+    display: block;
+  }
+
+  input[type=number] {
+    width: 80px;
+  }
 }
