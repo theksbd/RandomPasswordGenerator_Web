@@ -1,2 +1,5 @@
-# My first website
+# Random Password Generator - My first website
 Just a simple website i created after learning HTML, CSS and Javascipt
+
+# Live site
+[Random Password Generator](https://theksbd.github.io/RandomPasswordGenerator_Web/)
